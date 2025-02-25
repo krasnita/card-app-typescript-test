@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure background and text color switch correctly */
+html, body {
+    @apply bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300;
+}
+
+/* Keep text in input fields black, even in dark mode */
+input, textarea {
+    @apply text-black bg-white dark:bg-gray-200;
+}
