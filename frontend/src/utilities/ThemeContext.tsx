@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, ReactNode } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface ThemeContextType {
   darkMode: boolean;
@@ -35,9 +35,5 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  return (
-    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>{children}</ThemeContext.Provider>;
 };
